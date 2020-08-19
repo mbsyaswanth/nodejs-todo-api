@@ -13,7 +13,7 @@ const createTodo = (request, response) => {
 
 const updateTodo = (request, response) => {
   const { _id, description, status } = request.body;
-  Todo.update(
+  Todo.findOneAndUpdate(
     { _id },
     { description, status },
     { new: true },
